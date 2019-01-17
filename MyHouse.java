@@ -5,14 +5,16 @@
  * @author Jason Liu
  * @version January 11, 2019
  */
-public class MyHouse extends MyHouse
+public class MyHouse
 {
     // instance variablews - replace the example below with your own
     // ACCESS_MODIFIER TYPE NAME
     private Circle sun;
     private Triangle roof;
     private Square base;
-    
+    private Square door1;
+    private Square door2;
+    private Square window;
     /**
      * The job of a constructer is to initialize all the instance variables.
      */
@@ -22,6 +24,9 @@ public class MyHouse extends MyHouse
         sun = new Circle();
         roof = new Triangle();
         base = new Square();
+        door1 = new Square();
+        door2 = new Square();
+        window = new Square();
     }
 
     /**
@@ -35,10 +40,35 @@ public class MyHouse extends MyHouse
         sun.changeSize(100);
         sun.changeColor("yellow");
         sun.makeVisible();
-        base. changeSize(200);
         
         //Draw base
-        
+        base.changeSize(120);
+        base.makeVisible();
+        base.moveVertical(130);
+        base.moveHorizontal(30);
+
         //Draw the roof
+        roof.changeSize(50 , 200);
+        roof.makeVisible();
+        roof.moveHorizontal(100);
+        roof.moveVertical(120);
+        
+        //Draw the door
+        door1.changeColor("blue");
+        door2.changeColor("blue");
+        door1.makeVisible();
+        door1.changeSize(30);
+        door2.makeVisible();
+        door2.changeSize(30);
+        door1.moveHorizontal(90);
+        door2.moveHorizontal(90);
+        door1.moveVertical(220);
+        door2.moveVertical(200);
+        
+        //Draw the window
+        window.makeVisible();
+        window.changeColor("yellow");
+        window.moveHorizontal(50);
+        window.moveVertical(160);
     }
 }
