@@ -15,6 +15,11 @@ public class MyHouse
     private Square door1;
     private Square door2;
     private Square window;
+    private Tree tree1;
+    private Tree tree2;
+    private Tree tree3;
+    private Tree tree4;
+    private Tree tree5;
     /**
      * The job of a constructer is to initialize all the instance variables.
      */
@@ -27,6 +32,11 @@ public class MyHouse
         door1 = new Square();
         door2 = new Square();
         window = new Square();
+        tree1 = new Tree(500,180);
+        tree2 = new Tree(200,180);
+        tree3 = new Tree(300,180);
+        tree4 = new Tree(400,180);
+        tree5 = new Tree(0,180);
     }
 
     /**

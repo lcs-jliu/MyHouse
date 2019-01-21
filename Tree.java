@@ -7,10 +7,10 @@
 public class Tree
 {
     // instance variables - replace the example below with your own
-    private Triangle Leaf1;
-    private Triangle Leaf2;
-    private Triangle Leaf3;
-    private Square Trunk;
+    private Triangle leaf1;
+    private Triangle leaf2;
+    private Triangle leaf3;
+    private Square trunk;
 
     /**
      * Constructor for objects of class Tree
@@ -21,10 +21,10 @@ public class Tree
     public Tree(int x, int y)
     {
         // initialise instance variables
-        Leaf1 = new Triangle();
-        Leaf2 = new Triangle();
-        Leaf3 = new Triangle();
-        Trunk = new Square();
+        leaf1 = new Triangle();
+        leaf2 = new Triangle();
+        leaf3 = new Triangle();
+        trunk = new Square();
         
         // actually draw the tree
         drawTree(x, y);
@@ -39,29 +39,36 @@ public class Tree
     public void drawTree(int x, int y)
     {
         // put your code here
-        Leaf1.changeColor("green");
-        Leaf1.makeVisible();
-        Leaf1.changeSize(50, 50); 
+        leaf1.changeColor("green");
+        leaf1.makeVisible();
+        leaf1.changeSize(50, 50);
+        leaf1.moveHorizontal(x);
+        leaf1.moveVertical(y);
         
         //
-        Leaf2.changeColor("green");
-        Leaf2.makeVisible();
-        Leaf2.moveVertical(15);
-        Leaf2.changeSize(50, 50); 
+        leaf2.changeColor("green");
+        leaf2.makeVisible();
+        leaf2.moveVertical(15);
+        leaf2.changeSize(50, 50); 
+        leaf2.moveHorizontal(x);
+        leaf2.moveVertical(y);
         
         //
-        Leaf3.changeColor("green");
-        Leaf3.moveVertical(30);
-        Leaf3.makeVisible();
-        Leaf3.changeSize(50, 50); 
+        leaf3.changeColor("green");
+        leaf3.moveVertical(30);
+        leaf3.makeVisible();
+        leaf3.changeSize(50, 50);
+        leaf3.moveHorizontal(x);
+        leaf3.moveVertical(y);
         
         //
-        Trunk.changeColor("black");
-        Trunk.moveVertical(45);
-        Trunk.makeVisible();
-        Trunk.moveHorizontal(-20);
-        Trunk.changeSize(20);
-        
+        trunk.changeColor("black");
+        trunk.moveVertical(45);
+        trunk.makeVisible();
+        trunk.moveHorizontal(-20);
+        trunk.changeSize(20);
+        trunk.moveHorizontal(x);
+        trunk.moveVertical(y);
         
         // translate the tree to the specified location
         
